@@ -1,16 +1,18 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import { BannerComponent } from './component/banner';
-import NavbarComponent from './component/navbar';
-import { FooterComponent } from './component/footer';
-// import { Button } from 'flowbite-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Login from './Pages/LoginPage';
 function App() {
   return (
     <React.Fragment>
-      <NavbarComponent />
-      <BannerComponent />
-      <FooterComponent />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          {/* <Route path="/contact" element={<div>Contact</div>} /> */}
+        </Routes>
+      </Router>
     </React.Fragment>
   );
 }

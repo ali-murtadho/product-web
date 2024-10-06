@@ -1,5 +1,5 @@
 'use client';
-
+import { Link } from 'react-router-dom';
 export default function NavbarComponent() {
   return (
     <div className="bg-white">
@@ -29,14 +29,14 @@ export default function NavbarComponent() {
             <a href="#d" className="text-sm font-semibold leading-6 text-gray-900">
               Marketplace
             </a>
-            <a href="#d" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="login" className="text-sm font-semibold leading-6 text-gray-900">
               Company
-            </a>
+            </Link>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#d" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link href="login" className="text-sm font-semibold leading-6 text-gray-900">
               Log in <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </nav>
         {/* Mobile menu, show/hide based on menu open state. */}
@@ -73,9 +73,9 @@ export default function NavbarComponent() {
                   </a>
                 </div>
                 <div className="py-6">
-                  <a href="ad" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  <Link to="login" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
